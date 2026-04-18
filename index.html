@@ -21,25 +21,23 @@
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": ["ProfessionalService", "LegalService"],
+      "@type": "ProfessionalService",
       "@id": "https://tariffbureau.com/#organization",
       "name": "The Tariff Bureau LLC",
       "url": "https://tariffbureau.com",
-      "logo": "https://tariffbureau.com/logo.png",
+      "logo": "https://tariffbureau.com",
       "description": "AI-powered trade intelligence and IEEPA tariff refund recovery advisory firm providing eligibility analysis, claim preparation support, and coordination assistance to U.S. importers. Powered by the TariffIQ platform.",
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Atlanta",
-        "streetAddress": "3343 Peachtree Rd NE, Suite 145 PMB 550",
         "addressRegion": "GA",
-        "postalCode": "30326",
         "addressCountry": "US"
       },
       "areaServed": {
         "@type": "Country",
         "name": "United States"
       },
-      "email": "alex@tariffbureau.com",
+      "email": "our intake form",
       "foundingDate": "2026-04-10",
       "taxID": "42-1842417",
       "knowsAbout": ["IEEPA tariffs", "CBP CAPE portal", "tariff refund recovery", "Section 301 tariffs", "trade intelligence", "HTS code analysis", "customs duty recovery"],
@@ -179,6 +177,23 @@
           "acceptedAnswer": {
             "@type": "Answer",
             "text": "Most U.S. importers are unaware that the CBP CAPE portal exists or that court orders have created refund eligibility. The filing process requires detailed import entry analysis, HTS code expertise, and familiarity with CBP administrative procedures that most internal teams do not have. Of approximately 330,000 eligible importers, only around 26,664 had enrolled in the ACE and ACH systems required for recovery as of early 2026 — leaving 92% of the eligible refund pool unclaimed."
+          }
+        },
+,
+        {
+          "@type": "Question",
+          "name": "Why did my ACH opt-in for electronic refunds fail?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "ACH enrollment for refunds is separate from ACH for paying duties. Common failures include: enrolling in the broker sub-account instead of the importer sub-account; IOR number mismatch between ACE and Form 7501; routing number that does not handle FedACH direct deposits; or no ACE Portal importer account. Verify enrollment by clicking Get Info/Refresh in the ACH Refund Authorization tab — you should see your bank name and last four digits of account number. Contact CBP at revenuerefunds@cbp.dhs.gov or (317) 298-1200."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What happens if my IEEPA refund was rejected due to missing ACH enrollment?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "CBP does not automatically re-attempt rejected refunds. Complete ACH enrollment in your ACE importer sub-account first, then follow CBP replacement refund instructions at cbp.gov. Your refund will not accrue interest while on hold due to missing ACH information."
           }
         },
         {
@@ -460,7 +475,7 @@
   <div class="section-inner">
     <p class="section-eyebrow">The Opportunity</p>
     <h2 class="section-title">A Narrow Window<br>for <em>Maximum Recovery</em></h2>
-    <p class="section-body">Federal court rulings and CBP administrative guidance have opened significant refund opportunities for importers who paid duties under IEEPA-based tariff orders. The CAPE portal launches April 20, 2026 — and the majority of affected importers have not yet completed ACE and ACH enrollment required to receive payment (Reuters, April 14, 2026).</p>
+    <p class="section-body">The CBP CAPE portal went live today — April 20, 2026. U.S. importers who paid duties under IEEPA-based tariff orders can now file for recovery. The majority of affected importers have not completed ACE and ACH enrollment required to receive payment, and thousands are already encountering ACH opt-in failures. The window is open — but only for those who are prepared.</p>
     <div class="opportunity-grid">
       <div class="opportunity-points">
         <div class="opportunity-point">
@@ -800,6 +815,52 @@
           <p>No. The Tariff Bureau LLC is an AI-powered trade intelligence and advisory firm. We are not a law firm, licensed customs broker, licensed attorney, or financial advisor. All services are informational and advisory in nature. Clients requiring formal legal proceedings or licensed customs broker services are responsible for retaining appropriate licensed professionals.</p>
         </div>
       </div>
+
+    </div>
+  </div>
+</section>
+
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Why did my ACH opt-in for electronic refunds fail?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">
+          <p>ACH enrollment for refunds is a completely separate process from ACH enrollment for paying duties. Most importers who fail ACH opt-in have made one of five errors: (1) they enrolled ACH for duty payments only — not for receiving refunds; (2) they enrolled in the broker sub-account instead of the importer sub-account; (3) their IOR number in ACE does not exactly match the IOR number on their Form 7501 Entry Summary; (4) their routing number does not handle FedACH direct deposits — wire-only routing numbers are rejected by CBP; or (5) they have no ACE Portal importer account at all. CBP does not send email confirmation of enrollment — the only way to verify is to click the Get Info/Refresh button in the ACH Refund Authorization tab and confirm your bank name and last four digits of account number appear. For refund enrollment support: revenuerefunds@cbp.dhs.gov or (317) 298-1200.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          How do I enroll in ACH refunds in the ACE Portal?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">
+          <p>Log into your ACE Secure Data Portal account at ace.cbp.dhs.gov. Navigate to your Importer sub-account — not the broker sub-account. Look for the ACH Refund Authorization tab. Enter your US bank routing number and account number. Before enrolling, confirm with your bank that your routing number handles FedACH direct deposits — ask specifically: "Does this routing number handle FedACH direct deposits?" Wire-only accounts use a different routing number. After submitting, click Get Info/Refresh to verify enrollment — you should see your bank name and last four digits of your account number. If you do not have an ACE Portal importer account, you must first submit CBP Form 5106 to establish one before ACH enrollment is possible.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          What happens if my IEEPA refund was rejected due to missing ACH enrollment?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">
+          <p>CBP does not automatically re-attempt rejected refunds. Over 12,300 refunds were certified but could not be paid before the CAPE portal launch because recipients had not completed ACH enrollment. If your refund was rejected, you must first complete ACH enrollment in your ACE importer sub-account, then follow CBP's published replacement refund process at cbp.gov/trade/programs-administration/trade-remedies/ieepa-duty-refunds. Your refund will not accrue interest during the period it is on hold due to missing ACH information. Prompt enrollment and following the replacement refund instructions is essential to receiving payment.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          What is the CAPE Declaration and how do I file one?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">
+          <p>A CAPE Declaration is a comma-separated values (.CSV) file containing your entry numbers that you upload through the CAPE tab in the ACE Portal. Only the Importer of Record or the licensed customs broker who filed the entries can submit a CAPE Declaration. Each Declaration can include up to 9,999 entries, and multiple Declarations may be submitted. Once filed, a Declaration cannot be amended — if entries are missing you must file a new Declaration. CBP validates both the file format and the individual entries, assigning a CAPE claim number upon acceptance. Rejected entries are removed with a reason code; valid entries proceed through processing. Data accuracy is critical — formatting errors or incorrect entry numbers result in rejection and require resubmission.</p>
+        </div>
+      </div>
+
 
     </div>
   </div>
